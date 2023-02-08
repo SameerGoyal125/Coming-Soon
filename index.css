@@ -1,56 +1,37 @@
-body {
-    background: #00091B;
+body{
+    background-color: #00091B;
     color: #fff;
-  }
-  
-  
-  @keyframes fadeIn {
-    from {top: 20%; opacity: 0;}
-    to {top: 100; opacity: 1;}
-    
-  }
-  
-  @-webkit-keyframes fadeIn {
-    from {top: 20%; opacity: 0;}
-    to {top: 100; opacity: 1;}
-    
-  }
-  
-  .wrapper {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    animation: fadeIn 1000ms ease;
-    -webkit-animation: fadeIn 1000ms ease;
-    justify-content:center;
-    text-align:center;
-  }
-  
-  h1 {
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.sub{
+    text-align: center;
+    width: 50%;
+}
+.dot{
+    color:#4FEBFE;
+}
+.heading{
     font-size: 50px;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 0;
     line-height: 1;
     font-weight: 700;
-    
-  }
-  
-  .dot {
-    color: #4FEBFE;
-  }
-  
-  p {
-    padding-top:5%;
-    text-align: left;
-    margin: 18px;
+    padding-bottom: 5%;
+}
+.para{
     font-family: 'Muli', sans-serif;
-    font-weight: normal;
-    
-  }
-  
-  .icons {
+    text-align: left;
+    padding: 5% 0;
+}
+.icons {
     text-align: center;
     
   }
@@ -68,8 +49,7 @@ body {
     text-decoration: none;
     position: relative;
   }
-  
-  .icons i:hover, .icons i:active {
+.icons i:hover, .icons i:active {
     color: #fff;
     background: none;
     cursor: pointer !important;
@@ -77,4 +57,19 @@ body {
     -webkit-transform: scale(1.2);
     text-decoration: none;
     
+  }
+  @media all and (max-width: 767px){
+    .main{
+        padding: 10%;
+        height: auto;
+    }
+    .sub{
+        width:90%;
+    }
+    .heading{
+        font-size: 30px;
+    }
+    .para{
+        font-size: 15px;
+    }
   }
